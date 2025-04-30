@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yasseraccademy</title>
+    <style>
+        /* خلفية خيالية */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            overflow-x: hidden;
+            animation: fadeIn 2s ease-in;
+        }
+
+        /* أنيميشن دخول سلس */
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        .fgh {
+            width: 200px;
+            color: white;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            border-radius: 10px;
+            height: 50px;
+            font-size: large;
+            border: none;
+            margin: 40px auto;
+            display: block;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(255, 65, 108, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .fgh:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(255, 75, 43, 0.8);
+        }
+
+        .asd {
+            font-size: 22px;
+            line-height: 1.8;
+        }
+
+        .text-with-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 50px 20px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .image {
+            width: 400px;
+            height:400px;
+            object-fit: cover;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .za {
+            border: none;
+            height: 9px;
+            background: linear-gradient(to right, #9b59b6, #8e44ad);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            border-radius: 2px;
+        }
+
+        .big-image {
+            position: relative;
+            width: 1000px;
+            height: 500px;
+            margin: 20px auto;
+        }
+
+        .big-image img:first-child {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 50px;
+        }
+
+        .big-image img:last-child {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            bottom: 20px;
+            right: 20px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: transparent;
+}
+
+    </style>
+</head>
+<body>
+<div id="particles-js"></div>
+
+    <div class="big-image">
+        <img src="big-image.jpg" alt="صورة كبيرة">
+        <img src="MR. YASSER.png" alt="صورة صغيرة">
+    </div>
+
+    <hr class="za">
+
+    <div class="text-with-image">
+        <img src="all-pages-2.png" alt="صورة" class="image">
+        <div class="text">
+            <p class="asd" align="right">
+                منصة YASSER ACCADEMY التعليمية<br><br>
+                منصة MATH هي بيئة تعليمية متكاملة مصممة لطلاب المراحل الدراسية من الصف الرابع الابتدائي حتى الأول الثانوي، تهدف إلى تبسيط مفاهيم الرياضيات وجعلها أكثر تفاعلاً وسهولة.<br><br>
+                تقدم المنصة:<br><br>
+                ✔ دروسًا مُرتَّبة حسب المناهج الدراسية، مع شرح واضح بالأمثلة.<br><br>
+                ✔ تمارين تفاعلية تغطي جميع المستويات، من الأساسيات إلى المسائل المتقدمة.<br><br>
+                ✔ فيديوهات تعليمية بطرق ممتعة تناسب كل مرحلة عمرية.<br><br>
+                ✔ اختبارات دورية لقياس الفهم وتعزيز الثقة بالنفس.<br><br>
+           
+                تساعد المنصة الطلاب على:<br><br>
+                تطوير المهارات التحليلية والتفكير المنطقي.<br>
+                التعلم بوتيرتهم الخاصة مع تتبع التقدم وإظهار نقاط القوة والضعف.
+            </p>
+        </div>
+    </div>
+
+    <a href="https://yasseraccademy.nzmly.com/">
+        <button class="fgh">GET STARTED</button>
+    </a>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": true
+      },
+      "size": {
+        "value": 3,
+        "random": true
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.3,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 2,
+        "direction": "none",
+        "out_mode": "out"
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        }
+      },
+      "modes": {
+        "repulse": {
+          "distance": 100
+        },
+        "push": {
+          "particles_nb": 4
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
+</html>
