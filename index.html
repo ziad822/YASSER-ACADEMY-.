@@ -1,210 +1,386 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>yasseraccademy</title>
-    <style>
-        /* خلفية خيالية */
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-            color: white;
-            overflow-x: hidden;
-            animation: fadeIn 2s ease-in;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ziad sites</title>
+  <style>
+    * {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* أنيميشن دخول سلس */
-        @keyframes fadeIn {
-            from {opacity: 0; transform: translateY(20px);}
-            to {opacity: 1; transform: translateY(0);}
-        }
+    body {
+      background: #fff;
+      color: #00bcd4;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
 
-        .fgh {
-            width: 200px;
-            color: white;
-            background: linear-gradient(45deg, #ff416c, #ff4b2b);
-            border-radius: 10px;
-            height: 50px;
-            font-size: large;
-            border: none;
-            margin: 40px auto;
-            display: block;
-            cursor: pointer;
-            box-shadow: 0 8px 20px rgba(255, 65, 108, 0.6);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    header {
+      position: absolute;
+      /* مش sticky */
+      top: 0;
+      width: 100%;
+      background: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      z-index: 10;
+    }
 
-        .fgh:hover {
-            transform: scale(1.1);
-            box-shadow: 0 10px 25px rgba(255, 75, 43, 0.8);
-        }
+    header .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+    }
 
-        .asd {
-            font-size: 22px;
-            line-height: 1.8;
-        }
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
 
-        .text-with-image {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 40px;
-            padding: 50px 20px;
-            animation: fadeIn 2s ease-in;
-        }
+    header nav ul li a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      color: white;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
 
-        .image {
-            width: 400px;
-            height:400px;
-            object-fit: cover;
-            border-radius: 30px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-        }
+    header nav ul li a:hover {
+      color: #00acc1;
+      transform: scale(1.1);
+    }
 
-        .za {
-            border: none;
-            height: 9px;
-            background: linear-gradient(to right, #9b59b6, #8e44ad);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 20px 0;
-            border-radius: 2px;
-        }
+    .ban {
+      position: relative;
+      width: 100%;
+      height: 900px;
+      overflow: hidden;
+    }
 
-        .big-image {
-            position: relative;
-            width: 1000px;
-            height: 500px;
-            margin: 20px auto;
-        }
+    .ban video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
 
-        .big-image img:first-child {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 50px;
-        }
+    .ban .container {
+      position: absolute;
+      /* مهم */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      color: white;
+      max-width: 800px;
+      margin: 0;
+      z-index: 2;
+    }
 
-        .big-image img:last-child {
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid white;
-            bottom: 20px;
-            right: 20px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-        }
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    background: transparent;
-}
+    .ban .container h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
 
-    </style>
+    .ban .container p {
+      font-size: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      color: white;
+      background: #00bcd4;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-size: 20px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #00acc1;
+      transform: scale(1.1);
+    }
+
+    section.menu {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section.menu h2 {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 50px;
+      color: #00bcd4;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .menu-item {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 188, 212, 0.2);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 30px rgba(0, 188, 212, 0.35);
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 3px solid #00bcd4;
+    }
+
+    .menu-item .details {
+      padding: 15px 20px;
+      color: #00bcd4;
+    }
+
+    .menu-item .details p {
+      color: #008c9e;
+    }
+
+    .menu-item .details h3,
+    .menu-item .details span {
+      color: #00bcd4;
+    }
+
+    section.order {
+      background: #e0edfa;
+      padding: 80px 20px;
+      max-width: 800px;
+      margin: 50px auto;
+      border-radius: 20px;
+      box-shadow: 0 6px 25px rgba(0, 188, 212, 0.25);
+    }
+
+    section.order h2 {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 40px;
+      color: #00bcd4;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    form label {
+      font-weight: 600;
+      font-size: 18px;
+      color: #0097a7;
+    }
+
+    form input,
+    form select,
+    form textarea {
+      padding: 12px 15px;
+      border: 2px solid #00bcd4;
+      border-radius: 8px;
+      font-size: 16px;
+      font-family: inherit;
+    }
+
+    form textarea {
+      min-height: 100px;
+    }
+
+    form button {
+      background: #00bcd4;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 20px;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    form button:hover {
+      background: #00acc1;
+      transform: scale(1.05);
+    }
+
+    section.contact {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: 60px auto;
+      text-align: center;
+      color: #00bcd4;
+    }
+
+    section.contact h2 {
+      font-size: 38px;
+      margin-bottom: 30px;
+    }
+
+    footer {
+      background: #00bcd4;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .ban .container h2 {
+        font-size: 32px;
+      }
+
+      .ban .container p {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .ban .container h2 {
+        font-size: 24px;
+      }
+
+      .ban .container p {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
-<body>
-<div id="particles-js"></div>
 
-    <div class="big-image">
-        <img src="big-image.jpg" alt="صورة كبيرة">
-        <img src="MR. YASSER.png" alt="صورة صغيرة">
+<body style="background-color: black;">
+
+  <header>
+    <a href="#" class="logo">Ziad sites</a>
+    <nav>
+      <ul>
+        <li><a href="#ban">Home</a></li>
+        <li><a href="#menu">Products</a></li>
+        <li><a href="#order">Ask Now</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="ban" id="ban">
+    <video autoplay muted loop>
+      <source src="coverr-sunset-over-the-atlantic-ocean-1409-1080p.mp4" type="video/mp4" />
+      متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+    <div class="container">
+      <h2>Welcome In My Site</h2>
+      <p>Ask for your SITE now</p>
+      <a href="#order" class="btn">Click here</a>
     </div>
+  </section>
 
-    <hr class="za">
-
-    <div class="text-with-image">
-        <img src="all-pages-2.png" alt="صورة" class="image">
-        <div class="text">
-            <p class="asd" align="right">
-                منصة YASSER ACCADEMY التعليمية<br><br>
-                منصة MATH هي بيئة تعليمية متكاملة مصممة لطلاب المراحل الدراسية من الصف الرابع الابتدائي حتى الأول الثانوي، تهدف إلى تبسيط مفاهيم الرياضيات وجعلها أكثر تفاعلاً وسهولة.<br><br>
-                تقدم المنصة:<br><br>
-                ✔ دروسًا مُرتَّبة حسب المناهج الدراسية، مع شرح واضح بالأمثلة.<br><br>
-                ✔ تمارين تفاعلية تغطي جميع المستويات، من الأساسيات إلى المسائل المتقدمة.<br><br>
-                ✔ فيديوهات تعليمية بطرق ممتعة تناسب كل مرحلة عمرية.<br><br>
-                ✔ اختبارات دورية لقياس الفهم وتعزيز الثقة بالنفس.<br><br>
-           
-                تساعد المنصة الطلاب على:<br><br>
-                تطوير المهارات التحليلية والتفكير المنطقي.<br>
-                التعلم بوتيرتهم الخاصة مع تتبع التقدم وإظهار نقاط القوة والضعف.
-            </p>
+  <section class="menu" id="menu">
+    <h2>products</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80"
+          alt="شاورما" />
+        <div class="details">
+          <h3>product 1</h3>
+          <p>description for the products</p>
+          <span>price</span>
         </div>
+      </div>
+      <div class="menu-item">
+        <img src="small.jpg" alt="كباب" />
+        <div class="details">
+          <h3>products</h3>
+          <p>description for the products</p>
+          <span>price</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="code.jpg" alt="مشويات مشكلة" />
+        <div class="details">
+          <h3>products</h3>
+          <p>description for the products</p>
+          <span>price</span>
+        </div>
+      </div>
     </div>
+  </section>
+<section>
+<div align="right" style=" height: 400px;width: 400px;border-radius: 500px;margin-right:  right 50px; padding-bottom: 600px;
+">
 
-    <a href="https://yasseraccademy.nzmly.com/">
-        <button class="fgh">GET STARTED</button>
-    </a>
+<img src="code1.jpg" alt="مشويات مشكلة" style="height: 600px;; width: 1700px; border-radius: 10px;  " />
+
+
+
+</div>
+
+
+
+
+</section>
+  <section class="order" id="order">
+    <h2>اطلب الآن</h2>
+    <form>
+      <label for="name">الاسم الكامل</label>
+      <input type="text" id="name" name="name" placeholder="ادخل اسمك الكامل" required />
+
+      <label for="phone">رقم الهاتف</label>
+      <input type="tel" id="phone" name="phone" placeholder="ادخل رقم الهاتف" required />
+
+      <label for="menu-item">اختر من القائمة</label>
+      <select id="menu-item" name="menu-item" required>
+        <option value="" disabled selected>اختر وجبتك</option>
+        <option value="shawarma">شاورما لحم</option>
+        <option value="kebab">كباب مشوي</option>
+        <option value="mixed-grill">مشويات مشكلة</option>
+      </select>
+
+      <label for="notes">ملاحظات إضافية</label>
+      <textarea id="notes" name="notes" placeholder="هل لديك أي ملاحظات؟"></textarea>
+
+      <button type="submit">ارسال الطلب</button>
+    </form>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>تواصل معنا</h2>
+    <p>يمكنك التواصل معنا عبر البريد الإلكتروني أو الهاتف</p>
+    <p>البريد الإلكتروني: info@alzaeem.com</p>
+    <p>الهاتف: 0123456789</p>
+  </section>
+
+  <footer>
+    All right reseved by ziad sayed &copy; 2025 ziad sites
+  </footer>
+
 </body>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script>
-  particlesJS("particles-js", {
-    "particles": {
-      "number": {
-        "value": 80,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#ffffff"
-      },
-      "shape": {
-        "type": "circle"
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": true
-      },
-      "size": {
-        "value": 3,
-        "random": true
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.3,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 2,
-        "direction": "none",
-        "out_mode": "out"
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "repulse"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        }
-      },
-      "modes": {
-        "repulse": {
-          "distance": 100
-        },
-        "push": {
-          "particles_nb": 4
-        }
-      }
-    },
-    "retina_detect": true
-  });
-</script>
 
 </html>
